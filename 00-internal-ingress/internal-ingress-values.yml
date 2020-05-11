@@ -1,0 +1,7 @@
+controller:
+  # make this ingress controller visible for ingresses with the following class
+  ingressClass: internal-nginx
+  service:
+    annotations:
+      # make ingress controller obtain IP addresses only from internal openstack load balancer
+      service.beta.kubernetes.io/openstack-internal-load-balancer: "true"

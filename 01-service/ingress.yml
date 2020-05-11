@@ -1,0 +1,14 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: whoami-ingress
+  annotations:
+    kubernetes.io/ingress.class: internal-nginx
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /whoami
+            backend:
+              serviceName: simple-whoami
+              servicePort: 80
