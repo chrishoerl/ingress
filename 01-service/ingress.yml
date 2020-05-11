@@ -3,6 +3,8 @@ kind: Ingress
 metadata:
   name: whoami-ingress
   annotations:
+    # now let us connect this ingress with the internal ingress controller
+    # which we defined in the step beforce
     kubernetes.io/ingress.class: internal-nginx
 spec:
   rules:
